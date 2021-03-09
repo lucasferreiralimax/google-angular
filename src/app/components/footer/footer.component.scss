@@ -1,0 +1,54 @@
+
+.App-footer {
+  align-items: center;
+  background: var(--main-bg-color-secondary);
+  border-top: 1px solid rgba(var(--main-color-rgb), .1);
+  bottom: 0;
+  box-sizing: border-box;
+  color: rgba(var(--main-color-rgb), .6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 10px 0 15px;
+  position: absolute;
+  text-align: center;
+  transition: .5s background;
+  width: 100%;
+  z-index: 9;
+  @media (max-height: 600px) {
+    position: relative;
+  }
+  & > div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+  }
+  .brasil {
+    align-items: center;
+    display: flex;
+    font-size: 1em;
+    font-weight: normal;
+    justify-content: center;
+    margin: 0;
+    pointer-events: none;
+    svg { margin-right: .5em; }
+  }
+  a {
+    color: inherit;
+    font-size: .9em;
+    text-decoration: none;
+    transition: .3s all;
+    &:hover { color: var(--main-color-primary); }
+  }
+}
+
+.divider {
+  border: 0 solid transparent;
+  border-top: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 1px 0 rgba(0,0,0,.1);
+  margin-bottom: 1em;
+  width: 100%;
+}
