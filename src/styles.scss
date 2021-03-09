@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color: '#fff';
+  --main-color-rgb: '255,255,255';
+  --main-color-primary: '#1a73e8';
+  --main-color-secondar: 'green';
+  --main-bg-color-primary: '#333';
+  --main-invert: '1';
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: var(--main-bg-color-primary);
+  color: var(--main-color);
+  font-family: Arial;
+  margin: 0;
+  transition: .3s all;
+}
+
+code { font-family: monospace; }
+
+.exit {
+  background-color: var(--main-bg-color-primary);
+  border: 0;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.icon {
+  background: url(//ssl.gstatic.com/inputtools/images/ita_sprite2.png) no-repeat;
+  display: block;
+  filter: Invert(var(--main-invert));
+  font-size: 0;
+  height: 14px;
+  line-height: 0;
+  margin: 0px;
+  opacity: .4;
+  pointer-events: none;
+  width: 14px;
+}
+
+.icon-exit { background-position: -668px -18px; }
