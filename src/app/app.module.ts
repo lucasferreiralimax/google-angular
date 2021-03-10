@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FooterComponent } from './components/footer/footer.component';
+import { DarkmodeComponent } from './components/darkmode/darkmode.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    DarkmodeComponent
   ],
   imports: [
     BrowserModule,
