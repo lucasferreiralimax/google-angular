@@ -1,0 +1,35 @@
+.darkmode {
+  -webkit-tap-highlight-color: transparent;
+  align-items: center;
+  background: rgba(var(--main-color-rgb), .1);
+  border-radius: 6px;
+  border: 1px solid rgba(var(--main-color-rgb), .2);
+  color: var(--main-color);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  outline: none;
+  padding: 2px;
+  &.footer {
+    background: rgba(var(--main-color-rgb), .1);
+    border: 0;
+    outline: none;
+    transition: .3s all;
+    width: auto;
+    &:hover { transform: scale(1.1); }
+    &:active { transform: scale(.9); }
+    &:focus {
+      background: rgba(var(--main-color-rgb), .2);
+      transform: scale(1.2);
+    }
+  }
+  div {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    user-select: none;
+    width: 100%;
+  }
+}
