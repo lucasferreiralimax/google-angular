@@ -7,12 +7,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FooterComponent } from './components/footer/footer.component';
 import { DarkmodeComponent } from './components/darkmode/darkmode.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    DarkmodeComponent
+    DarkmodeComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
