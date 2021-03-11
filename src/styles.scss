@@ -1,10 +1,15 @@
 :root {
-  --main-color: '#fff';
-  --main-color-rgb: '255,255,255';
-  --main-color-primary: '#1a73e8';
-  --main-color-secondar: 'green';
-  --main-bg-color-primary: '#333';
-  --main-invert: '1';
+  --main-color: #000;
+  --main-color-rgb: 0,0,0;
+  --main-color-primary: #1a73e8;
+  --main-color-secondary: green;
+  --main-bg-color-primary: #fff;
+  --main-bg-color-secondary: #f2f2f2;
+  --main-invert: 0;
+  --logo-filter: none;
+  --input-bg-color: #fff;
+  --input-bg-color-hover: #fff;
+  --input-drop-shadow: #20212447;
 }
 
 body {
