@@ -8,13 +8,15 @@ import { environment } from '../environments/environment';
 import { FooterComponent } from './components/footer/footer.component';
 import { DarkmodeComponent } from './components/darkmode/darkmode.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     DarkmodeComponent,
-    MenuComponent
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
