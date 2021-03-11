@@ -20,8 +20,6 @@ export class ProfileComponent implements OnInit {
     if (
         !event.path.includes(this._elementRef.nativeElement)
       ) { this.profile = false }
-
-    console.log(this.profile);
   }
 
 }
