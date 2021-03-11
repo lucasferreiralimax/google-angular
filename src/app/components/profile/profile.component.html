@@ -1,0 +1,19 @@
+<section class="App-profile">
+  <h1 (click)="profile = !profile">
+    2L
+    <img src="./assets/sinatra.jpg" class="App-profile-foto" alt="Foto Frank Sinatra" width="40" />
+  </h1>
+  <div class='App-profile__content' [class.show]="profile">
+    <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">
+      <img src="./assets/sinatra.jpg" class="App-profile-foto big" alt="Foto Frank Sinatra" />
+    </a>
+    <h1>Lucas Lima</h1>
+    <h2>lucasferreiralimax@gmail.com</h2>
+    <button type="button">Gerenciar sua Conta do Google</button>
+    <div class="divider">
+      <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">Política de Privacidade</a>
+      <div class="bullet">•</div>
+      <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">Termos de Serviço</a>
+    </div>
+  </div>
+</section>
