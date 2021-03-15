@@ -2,7 +2,7 @@
   <img src='./assets/logo.svg' class="App-logo" alt="logo Google" width="75" />
   <h1>Fazer login</h1>
   <p>Use sua Conta do Google</p>
-  <div class='App-login-control' [class.placeholder]='textInput'>
+  <div class='App-login-control' [class.placeholder]='textInput' [class.error]='error'>
     <input id="user" formControlName="user" type="text" class="App-login-input" required (input)='handleChange($event)' />
     <label htmlFor="user" class="App-login-label">Email ou telefone</label>
     <div class="App-login-error" *ngIf="error">
