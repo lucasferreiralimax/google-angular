@@ -24,6 +24,10 @@ export class SearchComponent implements OnInit {
 
   doisL() { alert('2Lembre sempre na fé não na sorte, firme e forte.'); };
 
+  searchClean() {
+    this.searchForm.controls['search'].reset();
+  };
+
   onSubmitSearch() {
     if(this.searchForm.controls['search'].value) {
       this.root.location = `https://www.google.com.br/search?&q=${this.searchForm.controls['search'].value}`;
