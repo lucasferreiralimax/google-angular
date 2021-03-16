@@ -1,6 +1,6 @@
-<section class='App-keyboard active'>
+<section class="App-keyboard" [class.active]="show">
   <h1>português brasileiro</h1>
-  <button class="exit" type="button"><i class="icon icon-exit">X</i></button>
+  <button class="exit" type="button" (click)="handleKeyboard(false)"><i class="icon icon-exit">X</i></button>
   <div class="App-keyboard-content">
     <div class="row">
       <button class="key" type="button">'</button>

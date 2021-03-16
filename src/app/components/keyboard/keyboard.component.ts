@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-keyboard',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KeyboardComponent implements OnInit {
 
+  @Input() show: boolean = false;
+  @Output() updateKeyboard = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  handleKeyboard(type: boolean) {
+    this.updateKeyboard.emit(type);
+  }
 }
