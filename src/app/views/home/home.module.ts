@@ -8,12 +8,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home.component';
 import { SearchComponent } from '../../components/search/search.component';
 import { HeaderComponent } from '../../components/header/header.component';
+import { KeyboardComponent } from '../../components/keyboard/keyboard.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     SearchComponent,
-    HeaderComponent
+    HeaderComponent,
+    KeyboardComponent
   ],
   imports: [
     CommonModule,
