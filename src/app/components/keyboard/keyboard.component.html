@@ -1,5 +1,5 @@
-<section class="App-keyboard" [class.active]="show">
-  <h1>português brasileiro</h1>
+<section class="App-keyboard" [class.active]="show" [style.transform]="'translate('+translateX+ ',' +translateY+')'">
+  <h1 (mousedown)="onMouseDown()">português brasileiro</h1>
   <button class="exit" type="button" (click)="handleKeyboard(false)"><i class="icon icon-exit">X</i></button>
   <div class="App-keyboard-content">
     <div class="row">
