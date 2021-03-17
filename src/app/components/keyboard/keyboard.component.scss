@@ -5,13 +5,14 @@
   font-family: arial,sans-serif;
   font-size: 14px;
   height: auto;
-  left: 0;
+  left: 50%;
   margin: 10px;
   opacity: 0;
   padding: 35px 10px 10px;
   pointer-events: none;
   position: absolute;
-  top: 0;
+  bottom: 100px;
+  transform: translateX(-50%);
   transition: .3s background-color opacity;
   user-select: none;
   z-index: 99;
