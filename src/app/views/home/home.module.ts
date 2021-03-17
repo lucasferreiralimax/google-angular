@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { HomeComponent } from './home.component';
 import { SearchComponent } from '../../components/search/search.component';
@@ -22,7 +23,8 @@ import { KeyboardComponent } from '../../components/keyboard/keyboard.component'
     HomeRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragDropModule
   ]
 })
 export class HomeModule { }
