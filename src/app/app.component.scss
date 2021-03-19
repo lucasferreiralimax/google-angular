@@ -5,10 +5,13 @@
   justify-content: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-height: 600px) {
   .App {
     justify-content: space-between;
     min-height: 600px;
   }
-  .App app-login {margin-bottom: auto; }
+}
+
+@media only screen and (max-width: 600px) {
+  .App app-login { margin-bottom: auto; }
 }
