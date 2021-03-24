@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { shiftEvent } from './shiftEvent'
 import { ctrlAltEvent } from './ctrlAltEvent'
 import { capslockEvent } from './capslockEvent'
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-keyboard',
@@ -17,7 +18,7 @@ export class KeyboardComponent {
   shift = false;
   ctrlalt = false;
 
-  constructor() { }
+  constructor(public searchService: SearchService) {}
 
   handleKeyboard(type: boolean) {
     this.updateKeyboard.emit(type);
@@ -65,12 +66,12 @@ export class KeyboardComponent {
       let endPos = element.selectionEnd;
       let textValue = element.value.substring(0, startPos-1) + element.value.substring(endPos, element.value.length)
 
-      this.root.querySelector('.App-search-input').value = textValue;
+      this.searchService.setSearch(textValue);
       element.focus()
       element.selectionStart = startPos;
       element.selectionEnd = --endPos;
     } else {
-      this.root.querySelector('.App-search-input').value = --element.value;
+      this.searchService.setSearch(String(--element.value));
       element.focus()
     }
   }
@@ -86,12 +87,12 @@ export class KeyboardComponent {
       let endPos = element.selectionEnd;
       let textValue = element.value.substring(0, startPos) + text + element.value.substring(endPos, element.value.length)
 
-      this.root.querySelector('.App-search-input').value = textValue
+      this.searchService.setSearch(textValue)
       element.focus()
       element.selectionStart = startPos + text.length;
       element.selectionEnd = startPos + text.length;
     } else {
-      this.root.querySelector('.App-search-input').value = element.value += text;
+      this.searchService.setSearch(element.value += text);
       element.focus()
     }
   }
