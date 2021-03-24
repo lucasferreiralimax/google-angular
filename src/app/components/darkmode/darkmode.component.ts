@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { DarkmodeService } from '../../services/darkmode.service'
 
@@ -7,21 +7,10 @@ import { DarkmodeService } from '../../services/darkmode.service'
   templateUrl: './darkmode.component.html',
   styleUrls: ['./darkmode.component.scss']
 })
-export class DarkmodeComponent implements OnInit {
+export class DarkmodeComponent {
 
   @Input() footer: any;
-  dark = false;
 
-  constructor(private darkmodeService: DarkmodeService) { }
-
-
-  ngOnInit(): void {
-    this.dark = this.darkmodeService.getDarkMode()
-  }
-
-  darkMode (type: boolean) {
-    this.darkmodeService.darkMode(!type)
-    this.dark = this.darkmodeService.getDarkMode()
-  }
+  constructor(public dark: DarkmodeService) { }
 
 }
