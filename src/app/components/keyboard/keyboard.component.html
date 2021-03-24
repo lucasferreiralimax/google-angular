@@ -1,7 +1,7 @@
 <section class="App-keyboard" [class.active]="show" cdkDragBoundary=".App" cdkDrag>
   <h1 cdkDragHandle>português brasileiro</h1>
   <button class="exit" type="button" (click)="handleKeyboard(false)"><i class="icon icon-exit">X</i></button>
-  <div class="App-keyboard-content">
+  <div class="App-keyboard-content" (click)="onKeyVirtualEvents($event)">
     <div class="row">
       <button class="key" type="button">'</button>
       <button class="key" type="button">1</button>
@@ -33,7 +33,7 @@
       <button class="key" type="button">[</button>
     </div>
     <div class="row">
-      <button class="key" type="button" style="width: 53.75px;"><i class="icon icon-capslock">capslock</i></button>
+      <button class="key" [class.active]="capslock" type="button" style="width: 53.75px;"><i class="icon icon-capslock">capslock</i></button>
       <button class="key" type="button">a</button>
       <button class="key" type="button">s</button>
       <button class="key" type="button">d</button>
@@ -48,7 +48,7 @@
       <button class="key" type="button">]</button>
     </div>
     <div class="row">
-      <button class="key" type="button" style="width: 37.25px;"><i class="icon icon-shitf">shift 1</i></button>
+      <button class="key" [class.active]="shift" type="button" style="width: 37.25px;"><i class="icon icon-shitf">shift 1</i></button>
       <button class="key" type="button">\</button>
       <button class="key" type="button">z</button>
       <button class="key" type="button">x</button>
@@ -60,12 +60,12 @@
       <button class="key" type="button">,</button>
       <button class="key" type="button">.</button>
       <button class="key" type="button">;</button>
-      <button class="key" type="button" style="width: 86.75px;"><i class="icon icon-shitf">shift 2</i></button>
+      <button class="key" [class.active]="shift" type="button" style="width: 86.75px;"><i class="icon icon-shitf">shift 2</i></button>
     </div>
     <div class="row">
-      <button class="key" type="button" style="width: 95px;">Ctrl+Alt</button>
+      <button class="key" [class.active]="ctrlalt" type="button" style="width: 95px;">Ctrl+Alt</button>
       <button class="key" type="button" style="width: 293px; font-size: 0px;">whitespace</button>
-      <button class="key" type="button" style="width: 95px;">Ctrl+Alt</button>
+      <button class="key" [class.active]="ctrlalt" type="button" style="width: 95px;">Ctrl+Alt</button>
     </div>
   </div>
 </section>
