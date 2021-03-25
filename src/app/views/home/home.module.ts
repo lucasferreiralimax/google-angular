@@ -10,13 +10,15 @@ import { HomeComponent } from './home.component';
 import { SearchComponent } from '../../components/search/search.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { KeyboardComponent } from '../../components/keyboard/keyboard.component';
+import { VoiceComponent } from '../../components/voice/voice.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     SearchComponent,
     HeaderComponent,
-    KeyboardComponent
+    KeyboardComponent,
+    VoiceComponent
   ],
   imports: [
     CommonModule,

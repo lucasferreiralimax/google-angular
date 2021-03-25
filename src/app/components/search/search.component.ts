@@ -11,7 +11,9 @@ export class SearchComponent implements OnInit {
 
   root = (<any>window);
   @Input() keyboard: boolean = false;
+  @Input() voice: boolean = false;
   @Output() updateKeyboard = new EventEmitter<any>();
+  @Output() updateVoice = new EventEmitter<any>();
 
   constructor(public searchService: SearchService) {}
 
@@ -36,5 +38,8 @@ export class SearchComponent implements OnInit {
 
   handleKeyboard() {
     this.updateKeyboard.next();
+  }
+  handleVoice() {
+    this.updateVoice.next(true);
   }
 }

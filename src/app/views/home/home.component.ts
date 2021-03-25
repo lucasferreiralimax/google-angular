@@ -8,6 +8,7 @@ import { Component, OnInit, ɵɵsetComponentScope } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   keyboard: boolean = false;
+  voice: boolean = false;
 
   constructor() { }
 
@@ -19,5 +20,8 @@ export class HomeComponent implements OnInit {
   }
   handleKeyboard(type: boolean) {
     this.keyboard = type;
+  }
+  handleVoice(type: boolean) {
+    this.voice = type;
   }
 }

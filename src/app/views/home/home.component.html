@@ -1,4 +1,5 @@
 <app-profile></app-profile>
 <app-header></app-header>
-<app-search (updateKeyboard)="toggleKeyboard()" [keyboard]="keyboard"></app-search>
+<app-search (updateKeyboard)="toggleKeyboard()" (updateVoice)="handleVoice($event)" [keyboard]="keyboard"></app-search>
 <app-keyboard (updateKeyboard)="handleKeyboard($event)" [show]="keyboard"></app-keyboard>
+<app-voice (updateVoice)="handleVoice($event)" [show]="voice"></app-voice>
