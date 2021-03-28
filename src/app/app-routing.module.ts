@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'config',
     loadChildren: () => import('./views/config/config.module').then(m => m.ConfigModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./views/notfound/notfound.module').then(m => m.NotfoundModule)
   }
 ];
 
