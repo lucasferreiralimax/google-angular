@@ -3,6 +3,7 @@ import { shiftEvent } from './shiftEvent'
 import { ctrlAltEvent } from './ctrlAltEvent'
 import { capslockEvent } from './capslockEvent'
 import { SearchService } from '../../services/search.service';
+import { noKeysCharEvents } from './utils';
 
 @Component({
   selector: 'app-keyboard',
@@ -28,31 +29,34 @@ export class KeyboardComponent {
     if(event.target.classList.contains('key')) {
       let input = this.root.querySelector('.App-search-input')
 
-      switch(event.target.textContent) {
-        case 'capslock':
-          this.capslock = !this.capslock
-          capslockEvent(this.capslock)
-          break;
-        case 'shift 1':
-        case 'shift 2':
-          this.shift = !this.shift
-          shiftEvent(this.shift)
-          break;
-        case 'Ctrl+Alt':
-          this.ctrlalt = !this.ctrlalt
-          ctrlAltEvent(this.ctrlalt)
-          break;
-        case 'backspace':
-          this.backspaceEvent(input)
-          break;
-        case 'whitespace':
-          this.insertAtCaretEvent(input, ' ')
-          break;
-        default:
-          this.insertAtCaretEvent(input, event.target.textContent)
-          break;
+      if(!noKeysCharEvents.includes(event.target.textContent)) {
+        switch(event.target.textContent) {
+          case 'backspace':
+            this.backspaceEvent(input)
+            break;
+          case 'whitespace':
+            this.insertAtCaretEvent(input, ' ')
+            break;
+          default:
+            this.insertAtCaretEvent(input, event.target.textContent)
+        }
       }
     }
+  }
+
+  handleCapslock() {
+    this.capslock = !this.capslock
+    capslockEvent(this.capslock)
+  }
+
+  handleShift() {
+    this.shift = !this.shift
+    shiftEvent(this.shift)
+  }
+
+  handleCtrlAlt() {
+    this.ctrlalt = !this.ctrlalt
+    ctrlAltEvent(this.ctrlalt)
   }
 
   backspaceEvent(element: any) {
