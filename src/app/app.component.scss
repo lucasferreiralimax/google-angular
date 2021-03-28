@@ -5,6 +5,13 @@
   justify-content: center;
 }
 
+.App app-notfound {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media only screen and (max-height: 600px) {
   .App {
     justify-content: space-between;

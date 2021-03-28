@@ -21,6 +21,9 @@ body {
   margin: 0;
   transition: .3s all;
   overflow-x: hidden;
+  &.notfound {
+    background: url('/assets/robot.png') 80% 30% no-repeat;
+  }
 }
 
 code { font-family: monospace; }
