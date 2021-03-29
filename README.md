@@ -1,6 +1,7 @@
-# GoogleAngular
+# Google Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+## Screenshot
+![Google Angular Screenshot](https://g00gle-angular.web.app/assets/google-angular.png)
 
 ## Development server
 
