@@ -1,9 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { shiftEvent } from './shiftEvent'
-import { ctrlAltEvent } from './ctrlAltEvent'
-import { capslockEvent } from './capslockEvent'
-import { SearchService } from '../../services/search.service';
+import { shiftEvent, ctrlAltEvent, capslockEvent } from './events';
 import { noKeysCharEvents } from './utils';
+import { SearchService } from '../../services/search.service';
+
+interface KeyEvents {
+  [key: string]: any;
+  backspace: (el: HTMLElement) => void;
+  whitespace: (el: HTMLElement) => void;
+}
 
 @Component({
   selector: 'app-keyboard',
@@ -27,19 +31,17 @@ export class KeyboardComponent {
 
   onKeyVirtualEvents(event: any) {
     if(event.target.classList.contains('key')) {
-      let input = this.root.querySelector('.App-search-input')
+      const input = document.querySelector('.App-search-input')
+      const typeKey: string = event.target.textContent
+      const keyEvents: KeyEvents = {
+        backspace: (el) => this.backspaceEvent(el),
+        whitespace: (el) => this.insertAtCaretEvent(el, ' ')
+      }
 
-      if(!noKeysCharEvents.includes(event.target.textContent)) {
-        switch(event.target.textContent) {
-          case 'backspace':
-            this.backspaceEvent(input)
-            break;
-          case 'whitespace':
-            this.insertAtCaretEvent(input, ' ')
-            break;
-          default:
-            this.insertAtCaretEvent(input, event.target.textContent)
-        }
+      if(!noKeysCharEvents.includes(typeKey)) {
+        return keyEvents[typeKey]
+          ? keyEvents[typeKey](input)
+          : this.insertAtCaretEvent(input, typeKey)
       }
     }
   }
