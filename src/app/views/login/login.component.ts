@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms'
+import { UntypedFormBuilder, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   textInput: any = false;
   error: any = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: UntypedFormBuilder) {
     this.loginForm = this.formBuilder.group({
       user: ['lucasferreiralimax@gmail.com', [
         Validators.required
