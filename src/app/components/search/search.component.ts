@@ -37,7 +37,7 @@ export class SearchComponent implements OnInit {
   }
 
   handleKeyboard() {
-    this.updateKeyboard.next();
+    this.updateKeyboard.next(true);
   }
   handleVoice() {
     this.updateVoice.next(true);
