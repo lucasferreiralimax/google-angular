@@ -37,7 +37,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 #### С кем вы можете поговорить о проекте?
 #### 誰がプロジェクトについて話すことができますか？
 #### À qui pouvez-vous parler du projet?
-#### Projeyle ilgili kim konuşabilirsin?
+#### Proje ile ilgili kiminle konuşabilirsin ?
 #### 你能谈谈这个项目吗？
 
 * :ghost: @lucasferreiralimax
