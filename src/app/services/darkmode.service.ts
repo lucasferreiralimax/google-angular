@@ -20,10 +20,12 @@ export class DarkmodeService {
     if(type) {
       this.root.style.setProperty('--main-color', '#fff');
       this.root.style.setProperty('--main-color-rgb', '255,255,255');
-      this.root.style.setProperty('--main-color-primary', '#1a73e8');
+      this.root.style.setProperty('--main-color-primary', '26, 115, 232');
       this.root.style.setProperty('--main-color-secondary', 'green');
       this.root.style.setProperty('--main-bg-color-primary', '#202124');
       this.root.style.setProperty('--main-bg-color-secondary', '#171717');
+      this.root.style.setProperty('--main-bg-color-profile', '#202124');
+      this.root.style.setProperty('--main-border-color', '#747775');
       this.root.style.setProperty('--main-invert', '1');
       this.root.style.setProperty('--logo-filter', 'grayscale(1) brightness(3)');
       this.root.style.setProperty('--input-bg-color', '#202124');
@@ -32,10 +34,12 @@ export class DarkmodeService {
     } else {
       this.root.style.setProperty('--main-color', '#000');
       this.root.style.setProperty('--main-color-rgb', '0,0,0');
-      this.root.style.setProperty('--main-color-primary', '#1a73e8');
+      this.root.style.setProperty('--main-color-primary', '26, 115, 232');
       this.root.style.setProperty('--main-color-secondary', 'green');
       this.root.style.setProperty('--main-bg-color-primary', '#fff');
       this.root.style.setProperty('--main-bg-color-secondary', '#f2f2f2');
+      this.root.style.setProperty('--main-bg-color-profile', '#e9eef6');
+      this.root.style.setProperty('--main-border-color', '#747775');
       this.root.style.setProperty('--main-invert', '0');
       this.root.style.setProperty('--logo-filter', 'none');
       this.root.style.setProperty('--input-bg-color', '#fff');
