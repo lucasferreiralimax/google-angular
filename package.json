@@ -31,7 +31,7 @@
     "@angular/service-worker": "^18.1.4",
     "rxjs": "^7.8.1",
     "tslib": "^2.6.3",
-    "zone.js": "^0.14.8"
+    "zone.js": "^0.14.10"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.1.4",
@@ -48,7 +48,7 @@
     "karma-jasmine": "^5.1.0",
     "karma-jasmine-html-reporter": "^2.1.0",
     "protractor": "~7.0.0",
-    "puppeteer": "^22.15.0",
+    "puppeteer": "^23.0.2",
     "ts-node": "^10.9.2",
     "tslint": "^5.20.1",
     "typescript": "^5.5.4"
